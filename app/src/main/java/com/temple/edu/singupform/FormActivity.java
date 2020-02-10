@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,16 @@ public class FormActivity extends AppCompatActivity {
                 String email = editEmail.getText().toString().trim();
                 String pass = editPass.getText().toString().trim();
                 String pass2 = editPass2.getText().toString().trim();
+                if(name.isEmpty() || email.isEmpty() || pass.isEmpty() || pass2.isEmpty()){
+                    Toast.makeText(FormActivity.this,R.string.enter_all_info,
+                            Toast.LENGTH_SHORT).show();
+                }
+                else if(!pass.equals(pass2)){
+                    Toast.makeText(FormActivity.this,R.string.pass_error_no_match,
+                            Toast.LENGTH_SHORT).show();
+                }else{
+                    
+                }
             }
         });
     }

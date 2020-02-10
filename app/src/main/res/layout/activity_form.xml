@@ -8,12 +8,18 @@
     android:layout_marginHorizontal="10dp"
     android:layout_marginVertical="10dp">
     <TextView
+        android:id="@+id/TitleText"
         android:text="@string/sign_up_form"
         android:textSize="30sp"
         android:textColor="@color/colorBlack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="10dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_form">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -105,4 +111,5 @@
         android:text="@string/save"
         android:layout_gravity="end"
         />
+    </LinearLayout>
 </LinearLayout>
