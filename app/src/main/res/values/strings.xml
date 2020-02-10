@@ -8,4 +8,5 @@
     <string name="sign_up_form">Sign Up Form</string>
     <string name="enter_all_info">You Must Enter All Info</string>
     <string name="pass_error_no_match">Password Must Match Password Confirmation</string>
+    <string name="welcome_string">Welcome , %s,\nto the Sign Up Form App</string>
 </resources>

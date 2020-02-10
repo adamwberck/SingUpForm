@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -17,6 +19,8 @@ public class FormActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
+        final LinearLayout formLayout = findViewById(R.id.layout_form);
+        final TextView textInfo = findViewById(R.id.text_info);
         final EditText editName  = findViewById(R.id.edit_name);
         final EditText editEmail = findViewById(R.id.edit_email);
         final EditText editPass  = findViewById(R.id.edit_pass);
@@ -36,8 +40,11 @@ public class FormActivity extends AppCompatActivity {
                 else if(!pass.equals(pass2)){
                     Toast.makeText(FormActivity.this,R.string.pass_error_no_match,
                             Toast.LENGTH_SHORT).show();
-                }else{
-                    
+                }
+                else{
+                    String welcome = getString(R.string.welcome_string,name);
+                    textInfo.setText(welcome);
+                    formLayout.setVisibility(View.GONE);
                 }
             }
         });
